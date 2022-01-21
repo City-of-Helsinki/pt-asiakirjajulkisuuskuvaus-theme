@@ -13,7 +13,7 @@
 
 	<div class="columns">
 		
-		<div class="column is-4">
+		<div class="column is-4 desktop-only tablet-only">
 			<?php
 			$parent_posts = get_posts(array(
 				'post_type' => 'tietovarannot',

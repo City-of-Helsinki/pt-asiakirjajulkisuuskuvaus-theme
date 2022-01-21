@@ -10,8 +10,5 @@
     ],
     "type": "wordpress-theme",
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "require": {
-        "composer/installers": "~1.0.0"
-    }
+    "prefer-stable": true
 }

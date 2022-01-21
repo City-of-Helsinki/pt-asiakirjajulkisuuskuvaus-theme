@@ -62,7 +62,7 @@ $image = get_field('category_image' , $term);
 
 					<section class="section latest zoom">
 						<h2 class="title"><?php the_archive_title( '<h2 class="section-title is-2">', '</h2>' ); ?></h2>
-						<div class="columns is-multiline">
+						<div class="columns is-multiline pad-medium">
 							<?php while ($query->have_posts()) : 
 								$query->the_post(); ?>
 

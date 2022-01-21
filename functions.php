@@ -28,17 +28,6 @@ if ( ! function_exists( 'asiakirjajulkisuuskuvaus_setup' ) ) :
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
 
-			  // Add support for editor styles.
-		add_theme_support( 'editor-styles' );
-		add_theme_support( 'wp-block-styles' );
-		add_theme_support( 'align-wide' );
-		add_theme_support( 'custom-spacing');
-
-		add_image_size( 'hero-image size', 1440, 400 );
-
-		// Enqueue editor styles.
-		add_editor_style( get_stylesheet_directory_uri() . '/dist/editor.min.css' );
-
 		/*
 		 * Let WordPress manage the document title.
 		 * By adding theme support, we declare that this theme does not use a
@@ -125,6 +114,23 @@ function asiakirjajulkisuuskuvaus_widgets_init() {
 }
 add_action( 'widgets_init', 'asiakirjajulkisuuskuvaus_widgets_init' );
 
+
+/**
+ * Sets up theme defaults and registers support for various WordPress features.
+ */
+function designhel_setup() {
+	  // Add support for editor styles.
+	add_theme_support( 'editor-styles' );
+	add_theme_support( 'wp-block-styles' );
+	add_theme_support( 'align-wide' );
+	add_theme_support( 'custom-spacing');
+
+	add_image_size( 'hero-image size', 1440, 400 );
+
+	// Enqueue editor styles.
+	add_editor_style( get_stylesheet_directory_uri() . '/dist/editor.min.css' );
+}
+add_action( 'after_setup_theme', 'designhel_setup' );
 
 
 /**
@@ -486,7 +492,7 @@ function asiakirjajulkisuuskuvaus_multilang_logo( $value ) {
 		else
 			$value = $default_logo;
 	}
-	$html = sprintf( '<a href="%1$s" title="Etusivulle" class="navbar-item" rel="home" itemprop="url"><img alt="Asiakirjajulkisuuskuvaus Logo" class="custom-logo" src="'.$value.'" /></a>',
+	$html = sprintf( '<a href="%1$s" title="Etusivulle" class="navbar-item" rel="home" itemprop="url"><img alt="Helsinki Design Logo" class="custom-logo" src="'.$value.'" /></a>',
 		esc_url( home_url( '/' ) ),
 		$value
 	);

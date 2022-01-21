@@ -66,7 +66,7 @@ $image = get_field('category_image' , $term);
 
 					<section class="section latest zoom">
 						<h2 class="title"><?php the_title(); ?></h2>
-						<div class="columns is-multiline">
+						<div class="columns is-multiline pad-medium">
 							<?php while ($query->have_posts()) : 
 								$query->the_post(); ?>
 

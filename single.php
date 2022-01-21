@@ -35,11 +35,7 @@ get_header(); ?>
 			</main><!-- #main -->
 
 			<div>
-
-
-
 			</div>
-
 
 		</div>
 	</div>
@@ -75,9 +71,7 @@ if (have_rows('tiesitko_jo')): ?>
 
 
 	<?php 
-	$tags = get_tags(array(
-		'hide_empty' => false
-	));
+	$tags = get_the_tags();
 
 	// show article tags if not empty
 	if ($tags): ?>
