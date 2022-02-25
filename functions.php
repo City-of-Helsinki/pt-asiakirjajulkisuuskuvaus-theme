@@ -530,7 +530,7 @@ function tietovarannot_cpt() {
 		'description'           => __( 'Tietovarannot sisältötyyppi', 'asiakirjajulkisuuskuvaus' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail', 'page-attributes', 'post-formats' ),
-		// 'taxonomies'            => array( 'category', 'post_tag' ),
+		'taxonomies'            => array( 'post_tag' ),
 		'hierarchical'          => true,
 		'public'                => true,
 		'show_ui'               => true,

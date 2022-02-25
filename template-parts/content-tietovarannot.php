@@ -18,7 +18,8 @@
 			$parent_posts = get_posts(array(
 				'post_type' => 'tietovarannot',
 				'posts_per_page' => -1, 
-				'post_parent' => 0
+				'post_parent' => 0,
+				'order' => ASC,
 			));
 			if (!empty($parent_posts)):
 				?>
