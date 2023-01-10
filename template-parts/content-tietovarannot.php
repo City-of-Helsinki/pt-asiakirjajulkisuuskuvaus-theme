@@ -19,7 +19,7 @@
 				'post_type' => 'tietovarannot',
 				'posts_per_page' => -1, 
 				'post_parent' => 0,
-				'order' => ASC,
+				'order' => 'ASC',
 			));
 			if (!empty($parent_posts)):
 				?>
